@@ -1,0 +1,13 @@
+package com.supershop.ecommerce.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
+import com.supershop.ecommerce.entity.Product;
+
+
+
+@RepositoryRestResource(collectionResourceRel = "products", path = "product")
+public interface ProductRepository extends JpaRepository<Product, Long>{
+
+}

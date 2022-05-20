@@ -1,0 +1,36 @@
+package com.supershop.ecommerce.config;
+
+import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
+import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
+import org.springframework.http.HttpMethod;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+
+import com.supershop.ecommerce.entity.Product;
+import com.supershop.ecommerce.entity.ProductCategory;
+
+public class MyDataRestConfig implements RepositoryRestConfigurer {
+
+	@Override
+	public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
+		// TODO Auto-generated method stub
+		RepositoryRestConfigurer.super.configureRepositoryRestConfiguration(config, cors);
+		
+		
+		HttpMethod[] unsupportedActions = {HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE};
+		
+		//Disable methods for Products
+		config.getExposureConfiguration()
+		.forDomainType(Product.class)
+		.withItemExposure((metdata, HttpMethod) -> HttpMethod.disable(unsupportedActions))
+		.withCollectionExposure((metdata, HttpMethod) -> HttpMethod.disable(unsupportedActions));
+		
+		//Disable methods for ProductCategory
+		config.getExposureConfiguration()
+		.forDomainType(ProductCategory.class)
+		.withItemExposure((metdata, HttpMethod) -> HttpMethod.disable(unsupportedActions))
+		.withCollectionExposure((metdata, HttpMethod) -> HttpMethod.disable(unsupportedActions));
+		
+		
+	}
+	
+}

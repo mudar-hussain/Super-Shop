@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;Super_Shop/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;Super-Shop&apos;&#x0D;&#x0A;- Destination element: &apos;Super_Shop/src/main/java&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Super-Shop/src/main/java/com.supershop.ecommerce.entity&#x0D;&#x0A;     Super-Shop/src/main/java/com.supershop.ecommerce.dao" description="Copy packages" destination="=Super_Shop/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.supershop.ecommerce.entity" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.supershop.ecommerce.dao" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1652944728447" version="1.0"/>
+</session>

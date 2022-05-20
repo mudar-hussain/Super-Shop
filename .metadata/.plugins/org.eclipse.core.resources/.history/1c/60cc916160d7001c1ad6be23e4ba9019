@@ -1,0 +1,6 @@
+export class Product {
+	sku: String;
+	name: String;
+	description: String;
+	unitPrice: String;
+}
